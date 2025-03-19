@@ -1,15 +1,16 @@
+import os
 from openai import OpenAI
 import streamlit as st
 
 st.title("ChatGPT-like clone")
 
 client = OpenAI(
-    base_url="http://0.0.0.0:8000/v1",
-    api_key="EMPTY",
+    base_url=os.environ["API_URL"],
+    api_key=os.environ["API_KEY"],
 )
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "qwen25"
+    st.session_state["openai_model"] = os.environ["MODEL_NAME"]
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

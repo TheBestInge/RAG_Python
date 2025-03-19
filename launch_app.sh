@@ -1,1 +1,2 @@
-streamlit run ./streamlit_app.py & sleep 5 && lt --port 8501
+source config.sh
+streamlit run ./streamlit_app.py --server.port $PORT
