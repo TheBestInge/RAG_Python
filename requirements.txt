@@ -1,5 +1,5 @@
-vllm
-transformers
-huggingface_hub
+#vllm
+#transformers
+#huggingface_hub
 openai
 streamlit
